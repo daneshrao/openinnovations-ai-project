@@ -81,3 +81,7 @@
 
 
 #### ** the sample ci scripts are provided in the ci-scripts folder to build and push image **
+
+
+
+![alt text](platform-eng-STAGED-WF.jpg)
