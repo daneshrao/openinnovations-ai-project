@@ -1,6 +1,6 @@
 # Microservices Platform Implementation
 
-This document provides the highlevel details of the techstack and their reasoning. Each individual components are seggregated into infra automations and shared components directories.
+This document provides the highlevel details of the techstack and their reasoning. Each individual components are seg
 
 ## Table of Contents
 1. [Infrastructure Platform](#infrastructure-platform)
