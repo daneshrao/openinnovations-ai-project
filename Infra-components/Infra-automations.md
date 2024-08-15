@@ -120,3 +120,8 @@ pipeline {
 
 }
 ``` 
+
+
+## Infa-automation workflow
+
+![alt text](platform-eng-Infrastructure-automations.jpg)

@@ -1,5 +1,7 @@
 # Microservices Platform Implementation
 
+This document provides the highlevel details of the techstack and their reasoning. Each individual components are seg
+
 ## Table of Contents
 1. [Infrastructure Platform](#infrastructure-platform)
 2. [Orchestration Technology](#orchestration-technology)
@@ -99,6 +101,6 @@
 
 * **Prometheus:** Collects metrics from Kubernetes and microservices, offering real-time monitoring in an effective timeseries manner.
 * **Grafana:** Visualizes metrics, enabling the creation of dashboards and alerts.
-* **EFK:** EFK stack provides a robust method of logging for the entire cluster
+* **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana
 
 
