@@ -78,3 +78,6 @@
 ## Jenkins deployment Workflow
 
 ![alt text](platform-eng-LLD-deployment-WF.jpg)
+
+
+#### ** the sample ci scripts are provided in the ci-scripts folder to build and push image **
