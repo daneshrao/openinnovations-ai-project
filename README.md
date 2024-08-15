@@ -103,4 +103,4 @@ This document provides the highlevel details of the techstack and their reasonin
 * **Grafana:** Visualizes metrics, enabling the creation of dashboards and alerts.
 * **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana
 
-
+![alt text](platform-eng-STAGED-WF-1.jpg)
