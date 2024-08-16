@@ -72,6 +72,9 @@ The architecture leverages AWS services and Kubernetes components to deploy and 
 
 3. **Pod Communication**:
    - **Pods**: Communicate internally within the cluster using HTTP.
+<br>
+
+![alt text](platform-eng-EKS-network-HLD.jpg)
 
 ## Authentication and Connection to RDS and Secrets Manager
 

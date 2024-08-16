@@ -79,7 +79,6 @@
 
 6. **Feedback and Monitoring**:
    - Jenkins reports the status of the pipeline and any errors.
-   - GitLab provides visibility into the pipeline execution and results.
 
 ## Sample Jenkinsfile
 

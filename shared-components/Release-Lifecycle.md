@@ -1,4 +1,4 @@
-# Release Management Implementation
+# Release Lifecycle 
 
 ## Overview
 This document outlines a comprehensive approach to release management, detailing the lifecycle stages from development to production, including handling hot fixes and branch synchronization. It also covers edge case scenarios to ensure a robust release process.
@@ -34,7 +34,8 @@ This document outlines a comprehensive approach to release management, detailing
 
 #### Deployment Strategies
 - **Canary Deployment**: Release the new version to a small subset of users before a full rollout. Monitor performance and rollback if issues are detected.
-- **Blue-Green Deployment**: Deploy the new version alongside the old version (blue and green environments). Switch traffic to the new version once it is validated.
+- **Blue-Green Deployment**: Deploys the new version alongside the old version (blue and green environments). Switch traffic to the new version once it is validated.
+
 
 #### Best Practices
 - **Monitoring and Alerts**: Implement robust monitoring and alerting to quickly detect and address issues in production.
@@ -71,3 +72,5 @@ This document outlines a comprehensive approach to release management, detailing
 
 ### Scenario 5: Hot Fix Conflicts
 - **Action**: Ensure that the hot fix does not conflict with ongoing development in the `develop` branch. Communicate with the development team and perform comprehensive testing after merging.
+
+

@@ -103,7 +103,7 @@ This concept is not covered much in the deepdive documents
 * **Grafana:** Visualizes metrics, enabling the creation of dashboards and alerts.
 * **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana.
 
-# Platform Automation Tools Categorization
+### Platform Automation Tools Categorization
 
 | Category                      | Tool(s)                          | Description |
 |-------------------------------|----------------------------------|-------------|
