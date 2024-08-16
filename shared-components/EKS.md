@@ -1,3 +1,4 @@
+
 # EKS Architecture Overview
 
 This document provides an overview of an Amazon EKS (Elastic Kubernetes Service) architecture designed for high availability, scalability, and secure management. The architecture includes various AWS services and configurations to ensure efficient operation, availability and robust security.
@@ -126,3 +127,5 @@ The security of the EKS architecture is enhanced through:
 
 
 ![alt text](platform-eng-EKS-architecture-1.jpg)
+
+---

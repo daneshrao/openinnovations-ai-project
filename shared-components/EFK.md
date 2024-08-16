@@ -92,3 +92,5 @@ The current architecture can be enhanced by introducing Kafka as a buffering and
 
 
 ![alt text](platform-eng-EFK.jpg)
+
+---
