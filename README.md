@@ -1,6 +1,6 @@
 # Microservices Platform Implementation
 
-This document provides the highlevel details of the techstack and their reasoning. Each individual components are seg
+This document provides the highlevel details of the techstack and their reasoning. Each individual components are seggregated as individual components into automations and shared-components directories and contains the relevant informations
 
 ## Table of Contents
 1. [Infrastructure Platform](#infrastructure-platform)
@@ -34,7 +34,7 @@ This document provides the highlevel details of the techstack and their reasonin
 **Reasoning:**
 - **Flexibility:** Kubernetes allows the deployment of microservices in containers with ease, handling deployment, scaling, and networking.
 - **Fault Tolerance:** Kubernetes supports self-healing, with automatic replacement and rescheduling of failed containers.
-- **Security:** Kubernetes integrates with AWS IAM for secure access and service-to-service communication.
+- **Security:** Kubernetes integrates with AWS IAM for secure access and service-to-service communication along with many out of box features.
 - **Autoscaling:** Kubernetes Horizontal Pod Autoscaler (HPA) and Cluster Autoscaler enable automatic scaling based on resource utilization.
 
 ## 3. Infrastructure Deployment Automation
@@ -72,13 +72,11 @@ This document provides the highlevel details of the techstack and their reasonin
 * The pipeline deploys the code to production.
 * Canary deployments or blue-green deployments can be used to minimize risks.
 
-## Hot Fixes
-
-### Deployment
+#### Hot Fixes
 * The hot fix is merged into both the main and develop branches to ensure consistency. It is then deployed to production via the CI/CD pipeline.
 
-### Branch Synchronization
-* After the hot fix is applied, synchronize the main and develop branches to ensure that all branches are up-to-date with the latest changes. This involves merging the hot fix into the develop branch if it was not already merged, and resolving any conflicts that may arise to maintain consistency across all branches.
+    ##### Branch Synchronization
+    * After the hot fix is applied, synchronize the main and develop branches to ensure that all branches are up-to-date with the latest changes. This involves merging the hot fix into the develop branch if it was not already merged, and resolving any conflicts that may arise to maintain consistency across all branches.
 
 
 #### Rollback Strategy
@@ -91,6 +89,7 @@ This document provides the highlevel details of the techstack and their reasonin
 **Reasoning:**
 
 * **Terratest:** Automates tests for Terraform configurations, ensuring infrastructure is deployed as expected. 
+This concept is not covered much in the deepdive documents
 
 
 ### Monitoring Approach
@@ -103,4 +102,7 @@ This document provides the highlevel details of the techstack and their reasonin
 * **Grafana:** Visualizes metrics, enabling the creation of dashboards and alerts.
 * **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana
 
+#### Stages Of Platform Automation Workflow
+\
+\
 ![alt text](platform-eng-STAGED-WF.jpg)
