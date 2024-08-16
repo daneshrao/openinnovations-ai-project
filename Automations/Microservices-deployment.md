@@ -8,7 +8,7 @@ This document describes a high-level workflow for deploying microservices in a K
 
 ### 1. **GitLab**
    - **Role**: Source Code Management
-   - **Purpose**: Developers commit code to GitLab repositories. The repository holds the application code, Dockerfiles, Helm charts, and other relevant configuration files.
+   - **Purpose**: Developers commit code to GitLab repositories. The repository holds the application code, Dockerfiles and other relevant configuration files.
 
 ### 2. **Jenkins**
    - **Role**: Continuous Integration/Continuous Deployment (CI/CD)
@@ -16,7 +16,7 @@ This document describes a high-level workflow for deploying microservices in a K
 
 ### 3. **Trivy**
    - **Role**: Container Security Scanning
-   - **Purpose**: Trivy scans the Docker images for vulnerabilities before they are pushed to the Elastic Container Registry (ECR), ensuring that only secure images are deployed.
+   - **Purpose**: Trivy scans the Docker images for vulnerabilities before they are pushed to the Elastic Container Registry (ECR), ensuring that only secure and only accepted low vulnerability findings of images are deployed.
 
 ### 4. **Amazon Elastic Container Registry (ECR)**
    - **Role**: Container Image Repository
@@ -32,13 +32,13 @@ This document describes a high-level workflow for deploying microservices in a K
 
 ### 7. **SonarQube**
    - **Role**: Code Quality and Security Analysis
-   - **Purpose**: SonarQube scans the code for potential bugs, vulnerabilities, and code smells before Jenkins proceeds with the build process.
+   - **Purpose**: SonarQube scans the code for potential bugs, vulnerabilities, and code smells before Jenkins proceeds with the build process if the quality gate conditions are met, else the build process is halted.
 
-## Workflow
+## High Level Workflow
 
 ### 1. **Code Commitment in GitLab**
    - **Step Description**: 
-     - Developers work on feature branches and commit code changes to the GitLab repository. This repository contains the application code, Dockerfile, and Helm charts.
+     - Developers work on feature branches and commit code changes to the GitLab repository. This repository contains the application code, Dockerfile etc.
      - A GitLab webhook triggers a Jenkins pipeline upon code commit.
 
 ### 2. **Code Build by Jenkins**
@@ -90,12 +90,8 @@ This document describes a high-level workflow for deploying microservices in a K
    - The application is monitored using ArgoCD for any issues during deployment.
    - If the deployment is successful, the application runs in the target namespace, and developers can access logs and metrics for troubleshooting or performance monitoring.
 
-## Conclusion
 
-This workflow provides a robust, secure, and automated approach to managing microservices in a Kubernetes environment. By leveraging tools like GitLab, Jenkins, Trivy, ECR, Helm, and ArgoCD, organizations can ensure that their applications are deployed consistently, securely, and with minimal manual intervention.
-
-
+<br><br>
 
 ![alt text](platform-eng-hl-deploymentautomation.jpg)
 
----

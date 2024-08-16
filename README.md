@@ -99,7 +99,7 @@ This concept is not covered much in the deepdive documents
 **Reasoning:**
 
 * **Prometheus:** Collects metrics from Kubernetes and microservices, offering real-time monitoring in an effective timeseries manner.
-* **Prometheus:** extends Prometheus capabilities by enabling global querying across multiple Prometheus instances, providing durable storage for historical data, and ensuring high availability through replication and redundancy.
+* **Thanos:** extends Prometheus capabilities by enabling global querying across multiple Prometheus instances, providing durable storage for historical data, and ensuring high availability through replication and redundancy.
 * **Grafana:** Visualizes metrics, enabling the creation of dashboards and alerts.
 * **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana.
 
