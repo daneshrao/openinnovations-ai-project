@@ -26,7 +26,7 @@ The architecture leverages AWS services and Kubernetes components to deploy and 
    - **Role**: Routes traffic to Kubernetes services, enabling load balancing and SSL termination using AWS Certificate Manager.
 
 ### 5. **Ingress Controller**
-   - **Description**: The Ingress Controller manages external access to services within the EKS cluster, routing HTTP/HTTPS requests to the appropriate services.
+   - **Description**: The Nginx Ingress Controller manages external access to services within the EKS cluster, routing HTTP/HTTPS requests to the appropriate services.
    - **Role**: Works with ALB and service definitions to route traffic based on defined rules and paths.
 
 ### 6. **Services and Pods**

@@ -19,7 +19,7 @@ This document provides the highlevel details of the techstack and their reasonin
 - **Highly Available:**  AWS is one of the popular public cloud providers with  wide range of out of the box services  and a well defined community support     
 - **Managed Services:** AWS provides managed services for databases (RDS), container orchestration (EKS), and more, reducing the operational overhead of the engineers.
 - **Security:** AWS complies with various security standards (e.g., GDPR, HIPAA), and offers security services such as AWS IAM, KMS, and GuardDuty.
-- **Comprehensive Services*:** From compute and storage to databases, machine learning, and IoT, AWS provides a vast array of services to meet the demanding needs. 
+- **Comprehensive Services:** From compute and storage to databases, machine learning, and IoT, AWS provides a vast array of services to meet the demanding needs. 
 
 ## 2. Orchestration Technology
 
@@ -99,8 +99,25 @@ This concept is not covered much in the deepdive documents
 **Reasoning:**
 
 * **Prometheus:** Collects metrics from Kubernetes and microservices, offering real-time monitoring in an effective timeseries manner.
+* **Prometheus:** extends Prometheus capabilities by enabling global querying across multiple Prometheus instances, providing durable storage for historical data, and ensuring high availability through replication and redundancy.
 * **Grafana:** Visualizes metrics, enabling the creation of dashboards and alerts.
-* **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana
+* **EFK:** EFK stack provides a robust method of logging for the entire cluster using  Elasticsearch, Fluentd and kibana.
+
+# Platform Automation Tools Categorization
+
+| Category                      | Tool(s)                          | Description |
+|-------------------------------|----------------------------------|-------------|
+| **Version Control & CI/CD**   | GitLab, Jenkins, ArgoCD           | GitLab for source code management, Jenkins for continuous integration, and ArgoCD for continuous delivery. |
+| **Infrastructure as Code (IaC)** | Terraform                        | Terraform for provisioning and managing cloud resources. |
+| **Container Orchestration**   | EKS                              | Amazon Elastic Kubernetes Service (EKS) for running containerized applications. |
+| **Container Management**      | Helm, ECR                        | Helm for Kubernetes application packaging and deployment, and Amazon Elastic Container Registry (ECR) for container image storage. |
+| **Networking**                | NGINX Ingress, Route 53, CloudFront | NGINX Ingress for traffic management in Kubernetes, Route 53 for DNS, and CloudFront for content delivery. |
+| **Secrets Management**        | AWS Secrets Manager              | AWS Secrets Manager for securely storing and managing access to secrets. |
+| **Monitoring & Logging**      | Prometheus-Grafana, EFK          | Prometheus-Grafana for monitoring and alerting, and Elasticsearch-Logstash-Kibana (EFK) for centralized logging. |
+| **Storage**                   | S3, EBS                               | Amazon S3 for object storage, including storing application data and backups. |
+| **Database**                  | RDS PostgreSQL                   | Amazon RDS with PostgreSQL for relational database management. |
+| **Security & Compliance**     | AWS GuardDuty, AWS Config, AquaSec Trivy, SonarQube | AWS GuardDuty for threat detection, AWS Config for configuration compliance, AquaSec Trivy for container image scanning, and SonarQube for static code analysis and security scanning. |
+
 
 #### Stages Of Platform Automation Workflow
 \
